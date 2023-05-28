@@ -1,0 +1,110 @@
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: right;
+	
+		
+  }
+
+  #one {
+	flex: 1;
+	
+  }
+
+  #two {
+	flex: 1;
+	
+  }
+
+  #three {
+	flex: 1;
+	
+  }
+
+#p{
+	padding: 5px;
+	font-size: 8px;	
+}
+
+button{
+background-color: #cd365c;
+border-color: white;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 12px;
+}
+button:hover{background-color: #000000}
+
+.input{
+	background-color: #cd365c;
+	border-color: white;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	border-radius: 12px;
+	}
+.input:hover{background-color: #000000}
+	
+
+body{
+	background: url(/images/mecatrónica1.JPG);
+	font-size: 22px;
+	line-height: 32px;
+	margin: 0px;
+	color: white;
+	word-wrap: break-word !important;
+	font-family: system-ui;
+	background-size: 100%;
+}
+
+#container{margin: 0 auto;}
+nav{margin: 50px 0; background-color: #cd365c;}
+nav ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+nav ul li{
+	display: inline-block;
+	background-color: #cd365c;
+}
+nav a{
+	display: block;
+	padding: 0 10px;
+	color: white;
+	font-size: 20px;
+	line-height: 60px;
+	text-decoration: none;
+}
+nav a:hover{background-color: #000000}
+nav ul ul{
+	display: none;
+	position: absolute;
+	top: 60px;
+}
+nav ul li:hover > ul{display: inherit;}
+nav ul ul li{
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+nav ul ul ul li{
+	position: relative;
+	top: -60px;
+	left: 170px;
+}
+li > a:after{content: '+';}
+li > a:only-child:after{content: '';}
+
+
+img{
+	object-position: center;
+}

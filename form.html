@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="css/form.css">
+</head>
+<body>
+
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div><br>
+    
+    <left><a href="index.html"><img src="images/home.png" alt="home" width="4%" height="5%"></a></left>
+    <h1 class="style">Contacto</h1><br><br>
+  
+
+  <form action="#" target="" method="get" name="formDatosPersonales">
+
+	<label for="nombre">Nombre</label>
+	<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+
+	<label for="apellidos">Apellidos</label>
+	<input type="text" name="apellidos" id="apellidos" placeholder="Primer Apellido"/>
+
+	<label for="email">Email</label>
+	<input type="email" name="email" id="email" placeholder="Correo electrónico" required />
+
+	<label for="asunto">Asunto</label>
+	<input type ="text" name="asunto" id="asunto" placeholder="Titular de la consulta"/>
+
+	<label for="mensaje">Mensaje</label>
+	<textarea name="mensaje" for="mensaje" placeholder="Describa brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+	
+	<input type="submit" name="enviar" value="Enviar datos"/>
+</form>
+
+</div>
+
+</body>
+</html>
