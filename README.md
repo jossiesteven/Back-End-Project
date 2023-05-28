@@ -10,5 +10,5 @@ una carpeta de imágenes. Las pestañas funcionales son:
 inicio, autor+(hoja de vida, servicios y repositorio), contacto.
 Aunque iniciar sesión y registrarse estan habilitadas, unicamente
 se hizo como prueba y no es algo que pueda atribuir a mi autoría,
-lo tomé de una página de librerías con formularios.
+lo tomé unicamente como ejemplos de algunas librerías con formularios.
 
