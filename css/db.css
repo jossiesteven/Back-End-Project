@@ -1,0 +1,132 @@
+.item1 { grid-area: form; }
+.item2 { grid-area: query; }
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    
+    'form form form query query query';
+  gap: 10px;
+  background-color: #e0eaf1;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+    
+form{
+	width:400px;
+	padding:40px;
+	border-radius:10px;
+	margin: auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:112px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form button[type="button"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+
+input {
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: #817f7c;
+
+  border: solid 1px #b3aca7;
+  border-bottom: none;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+
+input:hover {
+  background: #6e6b69;
+  color: #1a1918;
+}
+
+select {
+    font-family: "Lato", sans-serif;
+    font-size: 0.875em;
+    width: 200px;
+    height: 30px;
+    padding: 0px 15px 0px 15px; 
+    
+}
+    
+select:hover {
+    background: #a1a1a1;
+    color: #4e4a46;
+  }
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+
+  background: transparent;
+  outline: none;
+
+  color: #312f2d;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875em;
+
+  border: solid 1px #b3aca7;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+}
+
+
+
+
+
+

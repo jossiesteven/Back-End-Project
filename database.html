@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>   
+    <link rel="stylesheet" type="text/css" href="css/db.css">
+
+</head>
+<body>
+
+    <left><a href="index.html"><img src="images/home.png" alt="home" width="3%" height="5%"></a></left>
+    <center><h1 class="style">Query admin</h1><br><br></center>
+
+    <div class="grid-container">
+     
+    <div class="item1">
+    <form>
+
+    <label for="names">ID-DB</label>
+        <input type="text" name="id" id="id" placeholder="Escribe el id"/>
+
+    <label for="names">Nombres</label>
+        <input type="text" name="names" id="names" placeholder="Escribe tus nombres"/>
+    
+    <label for="lastnames">Apellidos</label>
+        <input type="text" name="lastnames" id="lastnames" placeholder="Escribe tus apellidos"/>
+    
+    <label for="typeid">Tipo id</label>
+        <select id="typeid">
+        <option value="CC" selected>CC</option>
+        <option value="CE">CE</option>
+        <option value="TI">TI</option>
+        <option value="RC">RC</option>
+      </select>
+    
+    <label for="numberid">Número id</label>
+        <input type="text" name="numberid" id="numberid" placeholder="Ingresa # ID"/>
+    
+    <label for="telephone">Telefóno</label>
+        <input type="text" name="telephone" id="telephone" placeholder="Ingresa # telefóno"/>
+    
+    <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Correo electrónico" required/>
+    
+    <label for="occupation">Ocupación</label>
+        <input type ="text" name="occupation" id="occupation" placeholder="Escribe ocupación"/>
+    
+    <label for="role">Rol</label>
+        <select id="role">
+        <option value="Admin">Admin</option>
+        <option value="Editor">Editor</option>
+        <option value="Viewer">Viewer</option>
+        <option value="Guest" selected>Guest</option>
+      </select> 
+    </form></div>
+
+    <div class="item2">
+        <label for="mensaje">Consulta</label>
+	<textarea name="mensaje" for="mensaje" placeholder="Describa brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+  
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Tipo id</th>
+                <th scope="col">Número id</th>
+                <th scope="col">Telefóno</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Ocupación</th>
+                <th scope="col">Rol</th>
+            </tr>
+            </thead>
+            <tbody id="cuerpo">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>        
+    </div> 
+    <script>
+        function mostrar(){
+        const tabla = document.querySelector('#cuerpo');
+        const opciones = {
+            method: 'GET'
+        }
+            fetch('http://localhost:8000/api/clients',opciones)
+            .then(response=>response.json())
+            .then(resultado=>{
+                resultado.forEach(elemento => {
+                    tabla.innerHTML+= `
+                    <tr>
+                              <th scope="row">${elemento.id}</th>
+                              <td>${elemento.names}</td>
+                              <td>${elemento.lastnames}</td>
+                              <td>${elemento.typeid}</td>
+                              <td>${elemento.numberid}</td>
+                              <td>${elemento.telephone}</td>
+                              <td>${elemento.email}</td>
+                              <td>${elemento.occupation}</td>
+                              <td>${elemento.role}</td>
+                            </tr>
+                    
+                    `
+
+                    
+                });
+        });}
+    </script>
+    </div>
+    
+         
+</div>
+
+<center><div>  
+   
+    <button type="button" id="get" onclick="getClients(), mostrar()">Consultar datos</button>
+    <button type="button" id="update" onclick="updateClient()">Actualizar datos</button>
+    <button type="button" id="delete" onclick="deleteClient()">Borrar datos</button>     
+    </div></center>
+
+<script src="/js/db.js"></script>
+
+</body>
+</html>

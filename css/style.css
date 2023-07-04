@@ -1,4 +1,4 @@
-.box {
+﻿.box {
 	display: flex;
 	align-items: center;
 	justify-content: right;
@@ -53,7 +53,7 @@ button:hover{background-color: #000000}
 	
 
 body{
-	background: url(/images/mecatrónica1.JPG);
+	background: url(../images/mecatrónica1.jpg);
 	font-size: 22px;
 	line-height: 32px;
 	margin: 0px;
@@ -108,3 +108,4 @@ li > a:only-child:after{content: '';}
 img{
 	object-position: center;
 }
+

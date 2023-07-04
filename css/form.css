@@ -1,15 +1,15 @@
-*{box-sizing:border-box;}
+/* *{box-sizing:border-box;}*/
 
 form{
-	width:300px;
-	padding:16px;
+	width:400px;
+	padding:40px;
 	border-radius:10px;
-	margin:auto;
+	margin: auto;
 	background-color:#ccc;
 }
 
 form label{
-	width:72px;
+	width:112px;
 	font-weight:bold;
 	display:inline-block;
 }
@@ -25,7 +25,7 @@ form input[type="email"]{
 	display:inline-block;
 }
 
-form input[type="submit"]{
+form button[type="button"]{
 	width:100%;
 	padding:8px 16px;
 	margin-top:32px;

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Formulario</title>    
     <link rel="stylesheet" type="text/css" href="css/form.css">
+
 </head>
 <body>
 
@@ -14,31 +15,58 @@
     <div class="line"></div>
     <div class="line"></div><br>
     
-    <left><a href="index.html"><img src="images/home.png" alt="home" width="4%" height="5%"></a></left>
+    <left><a href="index.html"><img src="images/home.png" alt="home" width="3%" height="5%"></a></left>
     <h1 class="style">Contacto</h1><br><br>
   
 
-  <form action="#" target="" method="get" name="formDatosPersonales">
+  <form>
 
-	<label for="nombre">Nombre</label>
-	<input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+	<label for="names">Nombres</label>
+	<input type="text" name="names" id="names" placeholder="Escribe tus nombres"/>
 
-	<label for="apellidos">Apellidos</label>
-	<input type="text" name="apellidos" id="apellidos" placeholder="Primer Apellido"/>
+	<label for="lastnames">Apellidos</label>
+	<input type="text" name="lastnames" id="lastnames" placeholder="Escribe tus apellidos"/>
+
+  <label for="typeid">Tipo id</label>
+	<select id="typeid">
+    <option value="CC" selected>CC</option>
+    <option value="CE">CE</option>
+    <option value="TI">TI</option>
+    <option value="RC">RC</option>
+  </select><br>
+
+  <label for="numberid">Número id</label>
+	<input type="text" name="numberid" id="numberid" placeholder="Ingresa # ID"/>
+
+  <label for="telephone">Telefóno</label>
+	<input type="text" name="telephone" id="telephone" placeholder="Ingresa # telefóno"/>
 
 	<label for="email">Email</label>
-	<input type="email" name="email" id="email" placeholder="Correo electrónico" required />
+	<input type="email" name="email" id="email" placeholder="Correo electrónico" required/>
 
-	<label for="asunto">Asunto</label>
-	<input type ="text" name="asunto" id="asunto" placeholder="Titular de la consulta"/>
+	<label for="occupation">Ocupación</label>
+	<input type ="text" name="occupation" id="occupation" placeholder="Escribe ocupación"/>
+
+  <label for="role">Rol</label>
+	<select id="role">
+    <option value="Admin">Admin</option>
+    <option value="Editor">Editor</option>
+    <option value="Viewer">Viewer</option>
+    <option value="Guest" selected>Guest</option>
+  </select><br>
 
 	<label for="mensaje">Mensaje</label>
 	<textarea name="mensaje" for="mensaje" placeholder="Describa brevemente en menos de 300 carácteres" maxlength="300"></textarea>
 	
-	<input type="submit" name="enviar" value="Enviar datos"/>
-</form>
+	<button type="button" id="save" onclick="saveClient()">Enviar datos</button>
+    
+  <!-- <input type="submit" name="enviar" value="Enviar datos" id="save" onclick="saveClient()"/><br>
+  <input type="submit" name="enviar" value="Enviar datos" id="save" onclick="getClient()"/> -->
 
+</form>
 </div>
+
+<script src="/js/form.js"></script>
 
 </body>
 </html>
